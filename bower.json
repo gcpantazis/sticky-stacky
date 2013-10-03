@@ -1,0 +1,17 @@
+{
+  "name": "stickystacky",
+  "main": "stickystacky.js",
+  "version": "0.0.1",
+  "authors": [
+    "George Pantazis"
+  ],
+  "description": "Sticky, Stacking, DOM elements.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

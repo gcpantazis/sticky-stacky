@@ -1,0 +1,15 @@
+{
+  "name": "stickystacky",
+  "version": "0.0.1",
+  "description": "Sticky, Stacking, DOM Elements.",
+  "main": "stickystacky.js",
+  "keywords": [
+    "jquery",
+    "sticky",
+    "stacking",
+    "stacked",
+    "plugin"
+  ],
+  "author": "George Pantazis",
+  "license": "MIT"
+}
