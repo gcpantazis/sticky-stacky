@@ -1,6 +1,6 @@
 {
-  "name": "stickystacky",
-  "main": "stickystacky.js",
+  "name": "sticky-stacky",
+  "main": "sticky-stacky.js",
   "version": "0.0.1",
   "authors": [
     "George Pantazis"

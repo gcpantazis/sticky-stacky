@@ -1,5 +1,5 @@
-// StickyStacky
-// ============
+// Sticky-Stacky
+// =============
 //
 // * **Version:** 0.0.1
 // * **Author:** George Pantazis

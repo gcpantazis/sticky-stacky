@@ -12,16 +12,19 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'stickystacky.js'
+        'sticky-stacky.js'
       ]
+    },
+    clean: {
+      build: ['dist']
     },
     uglify: {
       target: {
         options: {
-          sourceMap: 'dist/stickystacky.min.js.map'
+          sourceMap: 'dist/sticky-stacky.min.js.map'
         },
         files: {
-          'dist/stickystacky.min.js': ['stickystacky.js']
+          'dist/sticky-stacky.min.js': ['sticky-stacky.js']
         }
       }
     }
@@ -30,6 +33,7 @@ module.exports = function(grunt) {
   grunt.registerTask('test', []);
 
   grunt.registerTask('default', [
+    'clean',
     'jshint',
     'uglify'
   ]);
