@@ -42,4 +42,4 @@ if (process.argv[2] === 'custom') {
   newVersion = splitVersion.join('.');
 }
 
-exec('find ./* -type f | xargs perl -pi -e \'s/' + json.version + '/' + newVersion + '/g\'');
+exec('find ./*.* -type f| xargs perl -pi -e \'s/' + json.version + '/' + newVersion + '/g\'');

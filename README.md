@@ -1,7 +1,7 @@
 Sticky-Stacky
 =============
 
-v0.0.2
+v0.0.3
 
 ## License
 Copyright (c) 2013 George Pantazis
