@@ -16,7 +16,10 @@
     // See: https://developer.mozilla.org/en-US/docs/Web/API/window.scrollY
 
     getScrollTop: function() {
-      return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
+      var fallbackReferenceObject = document.documentElement || document.body.parentNode || document.body;
+
+      return (window.pageYOffset !== undefined) ? window.pageYOffset : fallbackReferenceObject.scrollTop;
     },
 
     calculate: function() {
@@ -26,16 +29,17 @@
 
       for (var i in _instances) {
         var instance = _instances[i],
+          instanceStyle = instance.el.style,
           insteadWrapRect = instance.wrapper.getBoundingClientRect(),
           elTop = insteadWrapRect.top - document.documentElement.getBoundingClientRect().top,
           elHeight = insteadWrapRect.height,
           elWidth = insteadWrapRect.width;
 
-        if (scrollTop + stickyHeight > elTop ) {
+        if (scrollTop + stickyHeight > elTop) {
           instance.wrapper.style.height = elHeight + 'px';
-          instance.el.style.position = 'fixed';
-          instance.el.style.top = stickyHeight + 'px';
-          instance.el.style.width = elWidth + 'px';
+          instanceStyle.position = 'fixed';
+          instanceStyle.top = stickyHeight + 'px';
+          instanceStyle.width = elWidth + 'px';
           stickyHeight += elHeight;
         }
       }
