@@ -108,10 +108,15 @@
     }
   };
 
-  window.onscroll = window.onresize = function() {
+  window.addEventListener('resize', function() {
     _ss.unstickAll();
     _ss.calculate();
-  };
+  });
+
+  window.addEventListener('scroll', function() {
+    _ss.unstickAll();
+    _ss.calculate();
+  });
 
   if (typeof define === 'function' && define.amd) {
     define(['stickyStacky'], function() {
