@@ -16,15 +16,15 @@ module.exports = function(grunt) {
       ]
     },
     clean: {
-      build: ['dist']
+      build: ['*.min.js*']
     },
     uglify: {
       target: {
         options: {
-          sourceMap: 'dist/sticky-stacky.min.js.map'
+          sourceMap: 'sticky-stacky.min.js.map'
         },
         files: {
-          'dist/sticky-stacky.min.js': ['sticky-stacky.js']
+          'sticky-stacky.min.js': ['sticky-stacky.js']
         }
       }
     }
